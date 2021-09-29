@@ -1,19 +1,20 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-f059dc9a6f8d3a56e377f745f24479a46679e63a5d9fe6f495e02850cd0d8118.svg)](https://classroom.github.com/online_ide?assignment_repo_id=452397&assignment_repo_type=GroupAssignmentRepo)
 # Nome do projeto
+Comunicação com crianças autistas
 
-Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
+Nosso projeto visa facilitar o acesso à artigos e projetos voltados à pessoas autistas e seus familiares. Dessa forma, pretendemos ajudar na disseminação de informações bem embazadas cientificamente e que tragam efeitos positivos na convivência e desenvolvimento pleno dos mesmos na sociedade em que estão inseridos.
 
 ## Alunos integrantes da equipe
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Gabrielle Lira Dantas Wanderley
+* Amanda Mourthé Marques Villaça Veiga
+* Álvaro Henrique Tavares 
+* Heitor Pereira Albernaz Moreira
 
 ## Professores responsáveis
 
-* Nome completo do professor 1
-* Nome completo do professor 2
+* Rosilaine Ribeiro da Mota
+* Rommel Vieira Carneiro
 
 ## Instruções de utilização
 
