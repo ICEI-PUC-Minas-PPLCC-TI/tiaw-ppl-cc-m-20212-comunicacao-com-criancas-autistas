@@ -1,8 +1,8 @@
 # Documentação do Projeto
 Artefatos do Design Thinking:
-x-special/nautilus-clipboard
-copy
-file:///home/Gabrielle/Downloads/Comunica%C3%A7%C3%A3o%20de%20Crian%C3%A7as%20Autistas%20(1).pdf 
+![Comunicação de Crianças Autistas (1)](https://user-images.githubusercontent.com/79920434/135783110-c0423339-7e39-4641-b27f-ebc728a7b295.jpg)
+
+
 
 
 Inclua documentação do projeto, como relatórios da PROEX.
