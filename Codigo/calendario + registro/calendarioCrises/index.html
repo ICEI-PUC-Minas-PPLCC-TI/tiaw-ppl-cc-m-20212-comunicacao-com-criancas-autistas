@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Calendario de crises</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../style.css">  
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css">  
+    </head>
+<body>
+    <h1>Calendario de crises</h1>
+    <div class="container"> 
+        <div id="calendar"></div>
+    </div>
+    <script src="../app.js"></script>
+    <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales-all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales-all.min.js"></script>
+    <script>
+        const getEvents = ()=>{
+
+            debugger
+            const crises = JSON.parse(localStorage.getItem('db_crise'))
+            const map = ({id, data, motivo, tempoDeDuracao})=>{
+                const end = moment(data).add(+tempoDeDuracao, 'minutes')
+                return   {
+                        id,
+                        title: motivo,
+                        start: data,
+                        end 
+                }
+            }
+            try{
+                return crises.data.map(map)
+            }catch(e){
+                return db_crises_inicial.data.map(map)
+            }
+        }
+        const customBtn = {  
+            customButtons: {
+                myCustomButton: {
+                    text: 'Voltar Para Formulario',
+                    click: function() {
+                        location.href = '../';
+                    }}
+            },
+            headerToolbar: {
+                left: 'myCustomButton prev,next today',
+                center: 'title',
+                right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            }
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+          var calendarEl = document.getElementById('calendar');
+ 
+          var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            locale: 'pt-br',
+            events: getEvents(),
+            ...customBtn
+          });
+          calendar.render();
+        });
+  
+      </script>
+    
+</body>
+</html>

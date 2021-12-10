@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro de Crises</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">    
+</head>
+
+<body onload="Listacrises()">
+    <h1>Listagem de Crises</h1>
+
+    <div class="container">
+        <div class="row">
+            <div id="msg" class="col-sm-10 offset-sm-1 ">
+                <!--<div class="alert alert-warning">crise não encontrado.</div>-->
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="msg" class="col-sm-2 offset-sm-10 ">
+                <a href="index.html"><input type="button" class="btn btn-warning" id="btnClear" value="Cadastro"></a>
+            </div>
+        </div>        
+        
+        <form id="form-crise">            
+            <div class="form-group row">
+                <div class="col-sm-4">
+                    <select name="filtro_tempoDeDuracao" id="filtro_tempoDeDuracao" onchange="Listacrises()" class="form-control">
+                        <option value="">Tempo de Duração</option>
+                        <option value="15">15</option>
+                        <option value="30">30</option>
+                        <option value="45">45</option>
+                        <option value="60">60</option>
+                        <option value="75">75</option>
+                        <option value="+75">+75</option>
+                    </select>                    
+                </div>
+                <div class="col-sm-8">
+                    <select name="filtro_reacaoDelx" id="filtro_reacaoDelx" onchange="Listacrises()"  class="form-control">
+                        <option value="">Selecione uma Reacao</option>
+                        <option value="leve">Leve</option>
+                        <option value="moderada">Moderada</option>
+                        <option value="grave">Grave</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+
+
+        <div class="row">
+            <div class="col-sm-12">
+                <table id="grid-crises" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Data</th>
+                            <th scope="col">Motivo da Crise</th>
+                            <th scope="col">O que o/a Acalmou</th>
+                            <th scope="col">Tempo de Duração</th>
+                            <th scope="col">Reação Dele/a</th>
+                            <th scope="col">Sua Reação</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-crises">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+        // função para listar na tabela os crises que estão associados aos filtros 
+        function Listacrises() {
+            
+            
+            // Obtem os dados informados pelo usuário nos filtros
+            let fc = document.getElementById('filtro_tempoDeDuracao').value;
+            let fcg = document.getElementById('filtro_reacaoDelx').value;
+
+            // limpa a lista de crises apresentados
+            $("#table-crises").empty();
+
+            // Popula a tabela com os registros do banco de dados
+            for (let index = 0; index < db.data.length; index++) {
+                const crise = db.data[index];
+
+                // Verifica se os dados do crise batem com os filtros
+                if (((crise.tempoDeDuracao == fc) || (fc == '')) &&
+                    ((crise.reacaoDelx == fcg) || (fcg == ''))) {
+                    
+                    // Inclui o crise na tabela    
+                    $("#table-crises").append(`<tr><td scope="row">${crise.id}</td>
+                                                    <td>${treatDate(crise.data)}</td>
+                                                    <td>${crise.motivo}</td>
+                                                    <td>${crise.OQueAcalmou}</td>
+                                                    <td>${crise.tempoDeDuracao}</td>
+                                                    <td>${crise.reacaoDelx}</td>
+                                                    <td>${crise.suaReacao}</td>
+                                                </tr>`);
+                }
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

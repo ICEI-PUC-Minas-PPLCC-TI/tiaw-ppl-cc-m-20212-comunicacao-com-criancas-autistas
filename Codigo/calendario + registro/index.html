@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro de crises</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="init()">
+    <h1>Cadastro de crises (CRUD)</h1>
+
+    <div class="container">
+        <div class="row">
+            <div id="msg" class="col-sm-10 offset-sm-1 ">
+                <!--<div class="alert alert-warning">crise não encontrado.</div>-->
+            </div>
+        </div>
+
+        <form id="form-crise">
+            <div class="form-group row">
+                <div class="col-sm-4">
+                    <label for="inputId">Id</label>
+                    <input type="text" class="form-control" id="inputId" placeholder="ID" disabled>
+                </div>
+                <div class="col-sm-8">
+                    <label for="inputData">Data e horario de inicio (*)</label>
+                    <input type="datetime-local" class="form-control" id="inputData" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-5">
+                    <label for="inputMotivoCrise">Motivo da Crise (*)</label>
+                    <input type="text" class="form-control" id="inputMotivoCrise" required placeholder="Motivo">
+                </div>
+                <div class="col-sm-7">
+                    <label for="inputOQueAcalmou">O que o/a Acalmou (*)</label>
+                    <input type="text" class="form-control" id="inputOQueAcalmou" required placeholder="O que o/a Acalmou">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-6">
+                    <label for="inputTempo">Tempo de Duração (minutos)</label>
+                                       <br>
+                                       
+                                       <input type="radio" name="inputTempo" id="tempo1" value="15"required>
+                                       <label for="tempo1"> 15</label><br>
+                                       <input type="radio" name="inputTempo" id="tempo2" value="30"required>
+                                       <label for="tempo2"> 30</label><br>
+                                       <input type="radio" name="inputTempo" id="tempo3" value="45"required>
+                                       <label for="tempo3"> 45</label><br>
+                                       <input type="radio" name="inputTempo" id="tempo4" value="60"required>
+                                       <label for="tempo4"> 60</label><br>
+                                       <input type="radio" name="inputTempo" id="tempo5" value="75"required>
+                                       <label for="tempo5"> 75</label><br>
+                                       <input type="radio" name="inputTempo" id="tempo6" value="+75"required>
+                                       <label for="tempo6"> +75</label><br>
+                                       
+                    
+                </div>
+                <div class="col-sm-6">
+                    <label for="inputreacaoDelx">Reação Dele/a</label>
+                    <br>
+                    <input type="radio" name="inputreacaoDelx" id="reacao1" value="leve"required>
+                    <label for="reacao1"> Leve</label><br>
+                    <input type="radio" name="inputreacaoDelx" id="reacao2" value="moderada"required>
+                    <label for="reacao2"> Moderada</label><br>
+                    <input type="radio" name="inputreacaoDelx" id="reacao3" value="grave"required>
+                    <label for="reacao3"> Grave</label><br>
+                </div>
+            </div>
+            <div class="form-group row">    
+                <div class="col-sm-12">
+                    <label for="inputSuaReação">Sua Reação(*)</label>
+                    <input type="text" class="form-control" id="inputSuaReação" required placeholder="Como foi seu comportamento durante a crise?">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-4">
+                    <small>(*) Campos obrigatórios</small>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-12">
+                    <input type="button" class="btn btn-success" id="btnInsert" value="Inserir">
+                    <input type="button" class="btn btn-secondary" id="btnUpdate" value="Alterar">
+                    <input type="button" class="btn btn-info" id="btnDelete" value="Excluir">
+                    <input type="button" class="btn btn-secondary" id="btnClear" value="Limpar Form">
+                    <a href="lista_crises.html"><input type="button" class="btn btn-warning" id="btnClear" value="Pesquisar Crises"></a>
+                    <a href="calendarioCrises"><input type="button" class="btn btn-primary" value="Calendario"></a>
+                </div>
+            </div>
+        </form>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <table id="grid-crises" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Data</th>
+                            <th scope="col">Motivo da Crise</th>
+                            <th scope="col">O que o/a Acalmou</th>
+                            <th scope="col">Tempo de Duração</th>
+                            <th scope="col">Reação Dele/a</th>
+                            <th scope="col">Sua Reação</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-crises">
+                        <tr>
+                            <td scope="row">1</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+        const findCheckedRadioValue = (name)=>[...document.querySelectorAll(`input[name="${name}"]`)].find(input => input.checked).value
+        function exibecrises() {
+            // Remove todas as linhas do corpo da tabela
+            $("#table-crises").html("");
+
+            // Popula a tabela com os registros do banco de dados
+            for (i = 0; i < db.data.length; i++) {
+                let crise = db.data[i];    
+                $("#table-crises").append(`<tr><td scope="row">${crise.id}</td>
+                                                <td>${treatDate(crise.data)}</td>
+                                                <td>${crise.motivo}</td>
+                                                <td>${crise.OQueAcalmou}</td>
+                                                <td>${crise.tempoDeDuracao}</td>
+                                                <td>${crise.reacaoDelx}</td>
+                                                <td>${crise.suaReacao}</td>
+                                            </tr>`);
+            }
+        }
+
+        function init() {
+            // Adiciona funções para tratar os eventos 
+            $("#btnInsert").click(function () {
+                // Verfica se o formulário está preenchido corretamente
+                if (!$('#form-crise')[0].checkValidity()) {
+                    displayMessage("Preencha o formulário corretamente.");
+                    return;
+                }
+
+                // Obtem os valores dos campos do formulário
+                let campodata = $("#inputData").val();
+                let campoMotivoCrise = $("#inputMotivoCrise").val();
+                let campoOQueAcalmou = $('#inputOQueAcalmou').val();
+                
+                let campoTempo = findCheckedRadioValue('inputTempo')
+                
+                let camporeacaoDelx = findCheckedRadioValue('inputreacaoDelx')
+                let campoSuaReacao = $('#inputSuaReação').val();
+                let crise = { data: campodata, 
+                    motivo: campoMotivoCrise, 
+                    OQueAcalmou: campoOQueAcalmou, 
+                    tempoDeDuracao: campoTempo, 
+                    reacaoDelx: camporeacaoDelx,
+                    suaReacao: campoSuaReacao };
+
+                insertcrise(crise);
+
+                // Reexibe os crises
+                exibecrises();
+
+                // Limpa o formulario
+                $("#form-crise")[0].reset();
+            });
+
+            // Intercepta o click do botão Alterar
+            $("#btnUpdate").click(function () {
+                // Obtem os valores dos campos do formulário
+                let campoId = $("#inputId").val();
+                if (campoId == "") {
+                    displayMessage("Selecione uma crise a ser alterada.");
+                    return;
+                }
+                let campodata = $("#inputData").val();
+                let campomotivo = $("#inputMotivoCrise").val();
+                let campoOQueAcalmou = $("#inputOQueAcalmou").val();
+                let campotempoDeDuracao = $("#inputTempo").val();
+                let camporeacaoDelx = $("#inputreacaoDelx").val();
+                let campoSite = $('#inputSuaReação').val();
+                let crise = { data: campodata, 
+                    motivo: campomotivo, 
+                    OQueAcalmou: campoOQueAcalmou, 
+                    tempoDeDuracao: campotempoDeDuracao, 
+                    reacaoDelx: camporeacaoDelx,
+                    suaReacao: campoSite };
+
+                updatecrise(parseInt(campoId), crise);
+
+                // Reexibe os crises
+                exibecrises();
+
+                // Limpa o formulario
+                $("#form-crise")[0].reset();
+            });
+
+            // Intercepta o click do botão Excluir
+            $("#btnDelete").click(function () {
+                let campoId = $("#inputId").val();
+                if (campoId == "") {
+                    displayMessage("Selecione uma crise a ser excluída.");
+                    return;
+                }
+                deletecrise(parseInt(campoId));
+
+                // Reexibe os crises
+                exibecrises();
+
+                // Limpa o formulario
+                $("#form-crise")[0].reset();
+            });
+
+            // Intercepta o click do botão Listar crises
+            $("#btnClear").click(function () {
+                $("#form-crise")[0].reset();
+            });
+
+            // Oculta a mensagem de aviso após alguns segundos
+            $('#msg').bind("DOMSubtreeModified", function () {
+                window.setTimeout(function () {
+                    $(".alert").fadeTo(500, 0).slideUp(500, function () {
+                        $(this).remove();
+                    });
+                }, 5000);
+            });
+
+            // Preenche o formulário quando o usuario clicar em uma linha da tabela 
+            $("#grid-crises").on("click", "tr", function (e) {
+                let linhacrise = this;
+                colunas = linhacrise.querySelectorAll("td");
+
+                $("#inputId").val(colunas[0].innerText);
+                $("#inputData").val(colunas[1].innerText);
+                $("#inputMotivoCrise").val(colunas[2].innerText);
+                $("#inputOQueAcalmou").val(colunas[3].innerText);
+                $("#inputTempo").val(colunas[4].innerText);
+                $("#inputreacaoDelx").val(colunas[5].innerText);
+                $("#inputSuaReação").val(colunas[6].innerText);
+            });
+
+            exibecrises();
+        }
+    </script>
+</body>
+
+</html>
