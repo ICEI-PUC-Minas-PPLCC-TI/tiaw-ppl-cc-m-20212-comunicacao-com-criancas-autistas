@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/803215b3a7.js" crossorigin="anonymous"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="botao.css">
+    <script type="text/javascript " src="botao.js"></script>
+    <title>butao johnson</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="material-button-anim">
+                    <ul class="list-inline" id="options">
+                        <li class="option">
+                            <button class="material-button option1" type="button" id="b1">
+                                <span class="fas fa-angle-double-up" aria-hidden="true"></span>
+                            </button>
+                            <div class="col-4">
+                                <div id="myModal" class="modal">
+                                    <!-- Modal content -->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <span class="close">×</span>
+    
+                                            <div class="container">
+                                                <form id="contact" action="" method="post">
+                                                    <h2>Precisa de Ajuda?</h2>
+                                                    <h3>Aqui está os contatos de médicos e profissionais</h3>
+                                                    <p>
+                                                        (31) *****-**** - Belo Horizonte MG
+                                                    </p>
+                                                    <p>
+                                                        (11) *****-**** - São Paulo SP
+                                                    </p>
+                                                    <p>
+                                                        (22) *****-**** - Campos dos Goytacazes
+                                                    </p>
+                                                    <p>
+                                                        (71) *****-**** - Salvador BA
+                                                    </p>
+                                                    <p>
+                                                        (85) *****-**** - Fortaleza CE
+                                                    </p>
+                                                    <h3>Algumas dicas sobre o que fazer em momentos de crise.</h3>
+                                                    <p>
+                                                        Ponha cores na tela que o acalmam.
+                                                    </p>
+                                                    <p>
+                                                        Ponha uma musica calma.
+                                                    </p>
+                                                    <p>
+                                                        Evite contato físico.
+                                                    </p>
+                                                    <p>
+                                                        Não se exalte.
+                                                    </p>
+                                                    <p>
+                                                        Mantenha um tom de voz acolhedor.
+                                                    </p>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+<!-----------------------------------JavaScript---------------------------------------->
+                                    <script>
+                                        const modal = document.getElementById('myModal');
+                                        var btn = document.getElementById("b1");
+                                        var span = document.getElementsByClassName("close")[0];
+
+                                        btn.onclick = function () {
+                                            modal.style.display = "block";
+                                        }
+                                        span.onclick = function () {
+                                            modal.style.display = "none";
+                                        }
+                                        window.onclick = function (event) {
+                                            if (event.target == modal) {
+                                                modal.style.display = "none";
+                                            }
+                                        }
+                                    </script>
+<!----------------------------------------------------------------------------------------------------->
+                            </div>
+                        </li>
+                        </li>
+                        
+                    </ul>
+                    <button class="material-button material-button-toggle" type="button">
+                        <span class="fa fa-plus" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+        integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
