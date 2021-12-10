@@ -5,4 +5,4 @@ Artefatos do Design Thinking:
 
 
 
-Inclua documentação do projeto, como relatórios da PROEX.
+

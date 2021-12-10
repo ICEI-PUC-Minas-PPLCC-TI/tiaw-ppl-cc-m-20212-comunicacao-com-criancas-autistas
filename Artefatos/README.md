@@ -2,15 +2,10 @@
 
 Este diretório mantém os artefatos do projeto. 
 
-
-Liste os artefatos produzidos, com suas localizações e descrição do conteúdo.
-
-Por exemplo, pode-se criar um diretório "atas", que seria descrito da seguinte forma:
 * `/atas`
-	* **Ata_xx_ago_2020.docx**: Ata de reunião do dia xx de agosto de 2020.
+	*  [Ata_20_out_2021.docx](https://github.com/ICEI-PUC-Minas-PPLCC-TI/tiaw-ppl-cc-m-20212-comunicacao-com-criancas-autistas/files/7694492/Ata_20_out_2021.docx): Ata de reunião do dia 20 de outubro de 2021.
 
-Pode-se também criar um diretório "canvas", que seria descrito da seguinte forma:
+	* [Ata_01_dez_2021.docx](https://github.com/ICEI-PUC-Minas-PPLCC-TI/tiaw-ppl-cc-m-20212-comunicacao-com-criancas-autistas/files/7694509/Ata_01_dez_2021.docx): Ata de reunião do dia 01 dezembro de 2021.
+
 * `/canvas`
-	* **BusinessModelCanvas.pdf**: Canvas do modelo de negócios.
-
-Assim, sucessivamente para outros artefatos como `processos` e `DER`, etc.
+	*  	![Wireframe - TiawWireframe-Tiaw](https://user-images.githubusercontent.com/79920434/145619583-fce19d47-944a-42a9-a0cd-8124d997ab0b.png): Canvas do projeto wireframe.
