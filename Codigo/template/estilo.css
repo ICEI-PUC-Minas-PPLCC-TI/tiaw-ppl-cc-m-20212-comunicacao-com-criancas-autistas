@@ -1,0 +1,191 @@
+/* ----------------------------------- Barra de navegação ----------------------------------------*/
+
+.navbar-nav {
+    padding: 10px;
+}
+.navlogo {
+    padding: 0px;
+    margin-left: 40px;
+    text-decoration: none;
+    color: rgb(255, 153, 0);
+    font-size: 300%;
+}
+.navbar-nav a {
+    justify-content: space-between;
+    padding: 40px;
+    margin-left: 40px;
+    text-decoration: none;
+    color: rgb(255, 153, 0);
+}
+
+/* ----------------------------------- Index ----------------------------------------*/
+.grid_barraLat {
+    background-color: rgb(53, 30, 30);
+    margin: 0px;
+    padding: 0px;
+}
+.grid_barraLat button {
+    padding: 35px;
+    margin-left: 20px;
+}
+.butao1 {
+    padding: 10px;
+    margin-right: 25px;
+    size: 50px;
+    
+}
+.butao2 {
+    padding: 10px;
+    margin-right: 25px;
+}
+.butao3 {
+    padding: 10px;
+    margin-right: 25px;
+}
+.butao4 {
+    padding: 10px;
+    margin-right: 25px;
+}
+.butao5 {
+    padding: 10px;
+    margin-right: 25px;
+}
+.butao6 {
+    padding: 10px;
+    margin-right: 25px;
+}
+.butao7 {
+    padding: 10px;
+    margin-right: 25px;
+}
+body {
+    background-color: rgb(206, 174, 125);   
+}
+.grid_principal {
+    padding: 40px;
+    size:120%;
+}
+.grid_principal h1{
+    background-color: rgb(53, 30, 30);
+    text-align: center;
+    color: darkkhaki;
+    padding: 20px;
+}
+.grid_principal p{
+    background-color: rgb(53, 30, 30);
+    padding: 20px;
+    margin-top: 20px;;
+    color: darkkhaki;
+}
+
+/* ----------------------------------- Sobre nos ----------------------------------------*/
+.corpo1 h1{
+    background-color: rgb(53, 30, 30);
+    padding: 20px;
+    margin-left: 95%;
+    margin-top: 10%;
+    text-align: center;
+    color: darkkhaki;
+}
+.corpo1 p{
+    background-color: rgb(53, 30, 30);
+    color: darkkhaki;
+    padding: 2%;
+    font-size: 18px;
+    margin-top: 5%;
+}
+
+/* ------------------------------------- Login -------------------------------------------*/
+
+.form-login{
+    text-align: center;
+    padding: 20px;
+    margin-left: 0px;
+    
+}
+.login-caixa{
+    margin-left: 31%;
+    margin-top: 10%;
+}
+h4 {
+    color: darkkhaki;
+    padding: 5%;
+    background-color: rgb(53, 30, 30);
+    font-size: 30px;
+}
+.input {
+    padding: 10%;
+    margin-top: 20%;
+    background-color: rgb(53, 30, 30);
+}
+
+/* -------------------------------------Inscreva-se ----------------------------------------*/
+
+h3 {
+    color: darkkhaki;
+    text-align: left;
+    font-size: 25px;
+}
+.form-inscrever{
+    text-align: center;
+    padding: 20px;
+    margin-left: 0px;
+    
+}
+.inscrever-caixa{
+    margin-left: 31%;
+    margin-top: 2%;
+}
+
+.bwrapper {
+    margin-top: 10%;
+}
+
+/* ----------------------------------- Contato ------------------------------------------- */
+
+.contato1 h1{
+    background-color: rgb(53, 30, 30);
+    color: darkkhaki;
+    text-align: center;
+    padding: 20px;
+    margin-left: 95%;
+    margin-top: 10%; 
+}
+
+.corpoC {
+    background-color: rgb(53, 30, 30);
+    color: darkkhaki;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30%;
+    margin-right: 40%;
+}
+
+.corpoC p{
+    font-size: 20px;
+}
+
+/* -----------------------------------Pagina Inicial ------------------------------------*/
+
+.perfil1 {
+    padding: 8%;
+    margin-left: 10%;
+    margin-top: 10%;
+    background-color: rgb(53, 30, 30);
+    color: darkkhaki;
+}
+
+.perfil1 h2{
+    margin-top: 5%;
+}
+
+.perfil2 {
+    padding: 5%;
+    margin-top: 5%;
+    background-color: rgb(53, 30, 30);
+    color: darkkhaki;
+}
+
+.perfil2 p {
+    margin-right: 2%;
+}
