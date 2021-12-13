@@ -377,3 +377,6 @@ label {
  #calendar{
      max-height: 90vh;
  }
+ .cabecalho img{
+    margin-left: 20px;
+  }
