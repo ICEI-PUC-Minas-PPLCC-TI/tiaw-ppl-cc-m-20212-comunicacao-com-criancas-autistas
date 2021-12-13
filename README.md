@@ -7,8 +7,8 @@ Nosso projeto visa facilitar o acesso à artigos e projetos voltados à pessoas 
 ## Alunos integrantes da equipe
 
 * Gabrielle Lira Dantas Wanderley
-* Amanda Mourthé Marques Villaça Veiga
-* Álvaro Henrique Tavares 
+* Amanda Mourthé Marques Villaça Veiga **
+* Álvaro Henrique Tavares **
 * Heitor Pereira Albernaz Moreira
 
 ## Professores responsáveis
@@ -19,3 +19,5 @@ Nosso projeto visa facilitar o acesso à artigos e projetos voltados à pessoas 
 ## Instruções de utilização
 
 Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+
+** Alunos não participantes durante desenvolvimento do projeto.
