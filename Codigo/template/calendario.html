@@ -7,11 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cadastro de crises</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="estilo.css">
 </head>
 
 <body onload="init()">
-    <h1>Cadastro de crises (CRUD)</h1>
+    <h1>Cadastro de crises (CRUD)<a href="perfil.html">(voltar para o perfil)</a></h1>
 
     <div class="container">
         <div class="row">
@@ -90,7 +90,7 @@
                     <input type="button" class="btn btn-info" id="btnDelete" value="Excluir">
                     <input type="button" class="btn btn-secondary" id="btnClear" value="Limpar Form">
                     <a href="lista_crises.html"><input type="button" class="btn btn-warning" id="btnClear" value="Pesquisar Crises"></a>
-                    <a href="calendarioCrises"><input type="button" class="btn btn-primary" value="Calendario"></a>
+                    <a href="calendariocrises.html"><input type="button" class="btn btn-primary" value="Calendario"></a>
                 </div>
             </div>
         </form>
@@ -127,7 +127,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
-    <script src="app.js"></script>
+    <script src="func.js"></script>
     <script>
         const findCheckedRadioValue = (name)=>[...document.querySelectorAll(`input[name="${name}"]`)].find(input => input.checked).value
         function exibecrises() {
