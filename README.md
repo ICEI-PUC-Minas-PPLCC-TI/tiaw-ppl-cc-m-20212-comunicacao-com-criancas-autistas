@@ -7,9 +7,11 @@ Nosso projeto visa facilitar o acesso à artigos e projetos voltados à pessoas 
 ## Alunos integrantes da equipe
 
 * Gabrielle Lira Dantas Wanderley
+* Heitor Pereira Albernaz Moreira
 * Amanda Mourthé Marques Villaça Veiga **
 * Álvaro Henrique Tavares **
-* Heitor Pereira Albernaz Moreira
+
+** Alunos não participantes durante desenvolvimento do projeto.
 
 ## Professores responsáveis
 
@@ -18,6 +20,6 @@ Nosso projeto visa facilitar o acesso à artigos e projetos voltados à pessoas 
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+>Acesse o site pela url, cadastre-se com suas informações pessoais (em futuros acessos bastará fazer login com seu usuário e senha), crie seu perfil e utilize as >funcionalidades do site. Caso ocorra uma crise emocional por parte da pessoa autista a quem você tem contato próximo, clique no botão "Registro de Crises" e poderá >registrá-la, bem como gerar um calendário que as organizará de forma mais visual. Você pode, também, acessar nossos artigos sobre o tema e se informar mais. Se >tiver dúvidas acesse a página "Contato" e terá alguns telefones importantes.
 
-** Alunos não participantes durante desenvolvimento do projeto.
+
